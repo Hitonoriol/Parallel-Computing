@@ -47,7 +47,7 @@ void* MatrixMultiplicator::calculate_segment(void *descriptor_ptr)
 	auto height_b = descriptor.b.get_height();
 	auto idx = descriptor.output.to_idx(descriptor.i_start, descriptor.j_start);
 	auto end_idx = idx + descriptor.length - 1;
-	auto height = descriptor.output.height, width = descriptor.output.width;
+	auto height = descriptor.output.get_height(), width = descriptor.output.get_width();
 
 	double tmp;
 	size_t j = descriptor.j_start;

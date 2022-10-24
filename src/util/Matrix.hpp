@@ -12,26 +12,9 @@ template<typename T>
 class Matrix
 {
 	private:
-		friend class MatrixMultiplicator;
-
 		static constexpr size_t OUT_WIDTH = 10;
 		size_t width { 0 }, height { 0 };
 		std::vector<T> contents;
-
-		size_t to_idx(size_t i, size_t j)
-		{
-			return j + i * width;
-		}
-
-		size_t to_j(size_t index)
-		{
-			return index % width;
-		}
-
-		size_t to_i(size_t index)
-		{
-			return index / width;
-		}
 
 	public:
 		Matrix() : contents()
@@ -57,6 +40,21 @@ class Matrix
 		}
 
 		~Matrix() = default;
+
+		size_t to_idx(size_t i, size_t j)
+		{
+			return j + i * width;
+		}
+
+		size_t to_j(size_t index)
+		{
+			return index % width;
+		}
+
+		size_t to_i(size_t index)
+		{
+			return index / width;
+		}
 
 		void set_size(size_t width, size_t height)
 		{

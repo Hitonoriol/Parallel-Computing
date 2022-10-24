@@ -25,5 +25,6 @@ OBJS :=
 SUBDIRS := \
 src \
 src/lab1 \
+src/lab2 \
 src/util \
 
