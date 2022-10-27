@@ -26,5 +26,6 @@ SUBDIRS := \
 src \
 src/lab1 \
 src/lab2 \
+src/lab4 \
 src/util \
 

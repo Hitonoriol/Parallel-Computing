@@ -1,4 +1,4 @@
-#include <lab2/Lab2.hpp>
+#include <lab4/Lab4.hpp>
 
 #include <iostream>
 #include <fstream>
@@ -6,5 +6,5 @@
 
 int main(int argc, char *argv[])
 {
-	Lab2::run(argc, argv);
+	Lab4::run(argc, argv);
 }
