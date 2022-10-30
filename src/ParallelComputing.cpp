@@ -1,10 +1,11 @@
-#include <lab4/Lab4.hpp>
+#include <lab5/Lab5.hpp>
 
 #include <iostream>
 #include <fstream>
-#include <random>
+
+#include <util/random_data.hpp>
 
 int main(int argc, char *argv[])
 {
-	Lab4::run(argc, argv);
+	Lab5::run(argc, argv);
 }

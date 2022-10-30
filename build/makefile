@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/util/subdir.mk
+-include src/lab5/subdir.mk
 -include src/lab4/subdir.mk
 -include src/lab2/subdir.mk
 -include src/lab1/subdir.mk
@@ -42,7 +43,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Parallel Computing-lab4
+BUILD_ARTIFACT_NAME := parallel-computing-lab5
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -53,19 +54,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: Parallel\ Computing-lab4
+main-build: parallel-computing-lab5
 
 # Tool invocations
-Parallel\ Computing-lab4: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+parallel-computing-lab5: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MinGW C++ Linker'
-	g++  -o "Parallel Computing-lab4" $(OBJS) $(USER_OBJS) $(LIBS) -lpthread -lgomp
+	g++  -o "parallel-computing-lab5" $(OBJS) $(USER_OBJS) $(LIBS) -lpthread -lgomp
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Parallel\\ Computing-lab4
+	-$(RM) parallel-computing-lab5
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
