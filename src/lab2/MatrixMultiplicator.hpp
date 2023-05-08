@@ -1,10 +1,10 @@
 #ifndef MATRIXMULTIPLICATOR_HPP_
 #define MATRIXMULTIPLICATOR_HPP_
 
+#include <util/matrix.hpp>
 #include <string>
 #include <mutex>
 
-#include <util/matrix.hpp>
 
 namespace Lab2
 {

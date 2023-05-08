@@ -96,6 +96,11 @@ class Matrix
 			return at(i, j);
 		}
 
+		T* data()
+		{
+			return contents.data();
+		}
+
 		friend std::istream& operator >>(std::istream &in, Matrix &m)
 		{
 			std::string row_str { };

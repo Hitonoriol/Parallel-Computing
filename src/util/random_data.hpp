@@ -1,8 +1,8 @@
 #ifndef UTIL_RANDOM_DATA_HPP_
 #define UTIL_RANDOM_DATA_HPP_
 
+#include <util/matrix.hpp>
 #include <string>
-#include <util/Matrix.hpp>
 
 void generate_chars(const std::string&, size_t);
 void generate_doubles(const std::string&, size_t);
